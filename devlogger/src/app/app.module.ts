@@ -9,6 +9,7 @@ import { LogsComponent } from './components/logs/logs.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FormsModule } from '@angular/forms';
 
 library.add(fas);
 
@@ -17,12 +18,13 @@ library.add(fas);
     AppComponent,
     NavbarComponent,
     LogFormComponent,
-    LogsComponent
+    LogsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

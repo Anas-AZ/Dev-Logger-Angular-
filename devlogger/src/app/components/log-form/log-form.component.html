@@ -2,10 +2,10 @@
   <div class="card-body">
     <form>
       <div class="mb-3">
-        <input type="text" class="form-control" id="log-text" placeholder="Add a log...">
+        <input type="text" name="text" [(ngModel)]="text" class="form-control" id="log-text" placeholder="Add a log...">
       </div>
-      <input type="submit" class="btn btn-secondary" value="Add Log" disabled>
-      <button type="button" class="btn btn-warning ms-2" hidden>Clear</button>
+      <input type="submit" class="btn btn-secondary" value="Add Log" [disabled]="!text">
+      <button type="button" class="btn btn-warning ms-2" [hidden]="!text">Clear</button>
     </form>
   </div>
 </div>
