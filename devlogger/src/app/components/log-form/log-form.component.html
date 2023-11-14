@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <input type="text" name="text" [(ngModel)]="text" class="form-control" id="log-text" placeholder="Add a log...">
       </div>
