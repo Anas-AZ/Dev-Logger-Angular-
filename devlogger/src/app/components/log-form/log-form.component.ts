@@ -44,6 +44,16 @@ export class LogFormComponent implements OnInit{
       }
       this.logService.updateLog(updLog);
     }
+
+    this.clearState();
+  }
+
+  clearState() {
+    this.isNew = true;
+    this.id = '';
+    this.text = '';
+    this.date = '';
+    this.logService.clearState();
   }
 
   generateUUID() { // Public Domain/MIT

@@ -5,7 +5,7 @@
         <input type="text" name="text" [(ngModel)]="text" class="form-control" id="log-text" placeholder="Add a log...">
       </div>
       <input type="submit" class="btn btn-secondary" value="Add Log" [disabled]="!text">
-      <button type="button" class="btn btn-warning ms-2" [hidden]="!text">Clear</button>
+      <button type="button" class="btn btn-warning ms-2" [hidden]="!text" (click)="clearState()">Clear</button>
     </form>
   </div>
 </div>

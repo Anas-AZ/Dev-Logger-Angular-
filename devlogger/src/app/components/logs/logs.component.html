@@ -1,11 +1,20 @@
-<div class="card mt-5">
+<div class="card mt-5" *ngIf="loaded && logs.length > 0">
   <div class="card-body">
-    <ul class="list-group">
-      <li class="d-flex list-group-item justify-content-between align-items-center" *ngFor="let log of logs">
+    <ul class="list-group" >
+      <li class="d-flex list-group-item justify-content-between align-items-center" *ngFor="let log of logs"
+      [ngClass]="{'list-group-item-secondary':log === selectedLog}">
         <a (click)="onSelect(log)" href="#">{{log.text}}</a>
         <span class="log-date">{{log.date | date:'short'}}</span>
         <i (click)="onDelete(log)" class="fa-solid fa-trash fa-lg"></i>
       </li>
     </ul>
   </div>
+</div>
+
+<div class="mt-5 pt-5" *ngIf="loaded && logs.length == 0">
+<h5>There are no logs in the system</h5>
+</div>
+
+<div class="" *ngIf="!loaded">
+<h5>Loading...</h5>
 </div>
